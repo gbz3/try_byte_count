@@ -44,8 +44,8 @@ void cp930_2bytes() throws IOException {
         line.append(String.format("0x%03X", i));
         var isAnyMappable = false;
         for (int j = 0; j <= 0xF; j++) {
-            // 0x0E  シフトイン
-            // 0x0F  シフトアウト
+            // Shift-OUT(0x0e)
+            // Shift-IN(0x0f)
             var bb = ByteBuffer.wrap(new byte[]{(byte) 0x0E, (byte) ((i & 0xFF0) >> 4), (byte) ((i & 0xF) << 4 | j), (byte) 0x0F});
             if (decoder.decode(bb, CharBuffer.allocate(1), true).isUnmappable()) {
                 line.append("  <>");
@@ -60,4 +60,18 @@ void cp930_2bytes() throws IOException {
     }
 }
 cp930_2bytes()
+
+System.out.println();
+
+void checkConvert() {
+    var targets = "01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ㈱憂鬱①②③④⑤髙高🈕";
+    var encoder = Charset.forName("Cp930").newEncoder();
+
+    targets.chars()
+        .mapToObj(ch -> (char) ch)
+        .forEach(ch -> {
+            System.out.printf("%c => %b\n", ch, encoder.canEncode(ch));
+        });
+}
+checkConvert()
 /exit
