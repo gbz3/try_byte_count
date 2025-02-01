@@ -8,4 +8,8 @@
 - [Character Encodings/Code Tables/EBCDIC/Code page 930](https://en.wikibooks.org/wiki/Character_Encodings/Code_Tables/EBCDIC/Code_page_930)
 - [Code page identifiers](https://web.archive.org/web/20170610230903/http://www-01.ibm.com/software/globalization/cp/cp00300.html)
 - [jef4j](https://hidekatsu-izuno.github.io/jef4j/)
+- [富士通メインフレームの文字コード](https://www.idearu.info/article/data/ds1182)
+- [シフトJIS](https://ja.wikipedia.org/wiki/Shift_JIS)
+- [JIS X 0208](https://ja.wikipedia.org/wiki/JIS_X_0208)
+- [JIS X 0208コード表](https://www.asahi-net.or.jp/~AX2S-KMTN/ref/jisx0208.html)
 - 
